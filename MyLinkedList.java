@@ -30,18 +30,55 @@ public class MyLinkedList
     }
 
 
-    public boolean add(Object obj) {
-        ListNode newNode = new ListNode(obj); 
+    public boolean add(Object newItem) {
+        ListNode newNode = new ListNode(newItem); 
         if (head == null) {
             head = newNode;
-        } else {
+        } 
+        
+    else {
             ListNode current = head;
+            
             while (current.next != null) {
                 current = current.next;
             }
+            
             current.next = newNode;
         }
+        
         size++;
         return true;
     }   
+}
+
+    Public boolean addFirst(ObjectnewItem) {
+           ListNode newNode = new ListNode(newItem);
+           newNode.next = head;
+           head = NewNode;
+           size++;
+           return true;
+    }
+
+    Public boolean addLast(Object newItem) {
+        return add(newItem);
+    }
+
+    Public method get(int i) {
+       
+        if (i < 0 || i >= size) {
+            throw IndexOutofBoundsException
+        }
+    
+        temp = head;
+        count = 0;
+        while (count < i) {
+            temp = temp.next;
+            count++;
+        }
+
+        return temp.value;
+
+    }
+
+
 }
