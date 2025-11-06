@@ -8,6 +8,11 @@ public class ListNode
 	private Object value;
 	private ListNode next;
 
+	public ListNode(Object val) {
+        this.value = val;
+        this.next = null;
+    }
+
 	public ListNode(Object initValue, ListNode initNext)
 	{
 		value = initValue;
@@ -34,4 +39,7 @@ public class ListNode
 		next = theNewNext;
 	} // end setNext
 
+
+
+	
 } // end class
