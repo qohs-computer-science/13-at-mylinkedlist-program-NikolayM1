@@ -140,4 +140,25 @@ public class MyLinkedList
         size--; 
         return value;
     }
+
+    public String toString() {
+         if (head == null) {
+            return "List is empty.";
+        }
+
+        StringBuilder result = new StringBuilder();
+        ListNode temp = head;
+        int index = 0;
+
+        while (temp != null) {
+            result.append(index).append(":").append(String.valueOf(temp.getValue()));
+            if (temp.getNext() != null) {
+                result.append(System.lineSeparator());
+            }
+            temp = temp.getNext();
+            index++;
+        }
+
+        return result.toString();
+    }
 }   
